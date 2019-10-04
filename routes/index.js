@@ -4,6 +4,29 @@ const router = express.Router();
 const mysqlConnection  = require('../db');
 
 
+
+router.get('/createtable',(req,res)=>{
+   
+  
+  var sql = `
+     CREATE TABLE agenda (
+    id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name varchar(255) DEFAULT NULL,
+    address varchar(255) DEFAULT NULL,
+    phone decimal(10,0) NOT NULL
+    
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+  `;
+    mysqlConnection.query(sql, function (err, result) {
+      if (err) throw err;
+      console.log("Table created");
+    });
+
+  res.send('created!');
+
+});
+
+
 router.get('/', (req, res) => {
   mysqlConnection.query('SELECT * FROM alumnos', (err, rows, fields) => {
     if(!err) {
