@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 02-10-2019 a las 01:12:33
+-- Tiempo de generación: 04-10-2019 a las 05:19:49
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.1.28
 
@@ -32,20 +32,22 @@ CREATE TABLE `alumnos` (
   `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `lastName` varchar(50) NOT NULL,
-  `group` int(50) NOT NULL
+  `grupo` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `alumnos`
 --
 
-INSERT INTO `alumnos` (`id`, `name`, `lastName`, `group`) VALUES
+INSERT INTO `alumnos` (`id`, `name`, `lastName`, `grupo`) VALUES
 (1, 'Juan', 'Perez', 1),
 (2, 'Natalia', 'Alvarez', 2),
 (3, 'Orlyn', 'Rosales', 2),
 (4, 'Andrés', 'Fernández', 4),
 (5, 'David', 'Rodriguez', 4),
-(6, 'Mauricio', 'Pelaez', 3);
+(6, 'Mauricio', 'Pelaez', 3),
+(7, 'Juan', 'Perez', 1),
+(8, 'Juan', 'Perez', 1);
 
 -- --------------------------------------------------------
 
@@ -92,7 +94,7 @@ ALTER TABLE `cursos`
 -- AUTO_INCREMENT de la tabla `alumnos`
 --
 ALTER TABLE `alumnos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `cursos`
